@@ -29,7 +29,7 @@
               d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
               clip-rule="evenodd"></path>
           </svg>
-          <span class="ml-3">POS</span>
+          <span class="ml-3">Take Order</span>
         </a>
       </li>
       <li>
@@ -89,14 +89,15 @@
               clip-rule="evenodd"></path>
           </svg>
         </button>
-        <ul id="dropdown-sales" class=" py-2 space-y-2 {% if '/catalog' in request.path  %}  {% else %}hidden {% endif %}">
+        <ul id="dropdown-sales"
+          class=" py-2 space-y-2 {% if '/catalog' in request.path  %}  {% else %}hidden {% endif %}">
           <li>
             <a href="{{ url_for('categories')}}"
               class="flex items-center p-2 pl-11 w-full text-base font-normal text-sm text-gray-900 rounded-lg transition duration-75 group {% if request.path == '/catalog/categories' %} bg-gray-100 dark:bg-gray-700 {% endif %} hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">Categories</a>
           </li>
           <li>
             <a href="#"
-            class="flex items-center p-2 pl-11 w-full text-base font-normal text-sm text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">Unit</a>
+              class="flex items-center p-2 pl-11 w-full text-base font-normal text-sm text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">Unit</a>
           </li>
           <li>
             <a href="#"
