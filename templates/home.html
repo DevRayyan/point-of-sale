@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+    <div
+        class="flex flex-col relative items-center bg-white dark:bg-gray-900 justify-center border-2 border-dashed border-gray-300 rounded-lg dark:border-gray-600 h-32 md:h-64">
+
+        <div class="absolute left-3 top-3">
+            <div class="relative max-w-sm">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <svg class="w-3.5 h-3.5 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                    </svg>
+                </div>
+                <input datepicker type="text"
+                    class="bg-white border border-white text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full ps-10 p-2.5 dark:bg-gray-900 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500">
+            </div>
+        </div>
+
+        <dt class="mb-2 text-3xl font-extrabold  text-gray-900 dark:text-white">64,540.00</dt>
+        <dd class="text-gray-800 dark:text-gray-400">Total Sales Amount</dd>
+    </div>
+    <div
+        class="flex flex-col relative items-center bg-white dark:bg-gray-900 justify-center border-2 border-dashed border-gray-300 rounded-lg dark:border-gray-600 h-32 md:h-64">
+        <div class="absolute left-3 top-3">
+            <div class="relative max-w-sm">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <svg class="w-3.5 h-3.5 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                    </svg>
+                </div>
+                <input datepicker type="text"
+                    class="bg-white border border-white text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full ps-10 p-2.5 dark:bg-gray-900 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500">
+            </div>
+        </div>
+        <dt class="mb-2 text-3xl font-extrabold  text-gray-900 dark:text-white">319</dt>
+        <dd class="text-gray-800 dark:text-gray-400">Total Orders</dd>
+        <!-- <span class="text-green-500 text-xs">Complete Orders</span> -->
+    </div>
+    <div
+        class="flex flex-col relative items-center bg-white dark:bg-gray-900 justify-center border-2 border-dashed border-gray-300 rounded-lg dark:border-gray-600 h-32 md:h-64">
+
+        <dt class="mb-2 text-3xl font-extrabold  text-gray-900 dark:text-white">15</dt>
+        <dd class="text-gray-800 dark:text-gray-400">Total Products</dd>
+    </div>
+    <div
+        class="flex flex-col items-center bg-white dark:bg-gray-900 justify-center border-2 border-dashed border-gray-300 rounded-lg dark:border-gray-600 h-32 md:h-64">
+        <dt class="mb-2 text-3xl font-extrabold  text-gray-900 dark:text-white">5</dt>
+        <div class="flex">
+            <button type="button" class="text-white bg-orange-500 font-medium rounded-md text-xs px-4 py-2 me-2 mb-2 ">3
+                Low Stock</button>
+            <button type="button" class="text-white bg-red-500 font-medium rounded-md text-xs px-4 py-2 me-2 mb-2 ">2 No
+                Stock</button>
+        </div>
+
+        <dd class="text-gray-800 dark:text-gray-400">Stock Availablity</dd>
+        <!-- <span class="text-orange-500 text-xs font-medium">Indicates Low Stock</span> -->
+    </div>
+
+</div>
+<div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96 mb-4"></div>
+<div class="grid grid-cols-2 gap-4 mb-4">
+    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
+    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
+    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
+    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
+</div>
+<div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96 mb-4"></div>
+<div class="grid grid-cols-2 gap-4">
+    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
+    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
+    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
+    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
+</div>
+
+
+
+
+{% endblock %}

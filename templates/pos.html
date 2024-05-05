@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+
+{% block title %}POS - Screen{% endblock %}
+
+{% block content %}
+<div class="border border-dashed bg-white dark:bg-gray-900 rounded-lg border-gray-300 dark:border-gray-600 mb-4 ">
+    <div class="flex  ">
+        <div class="p-2 px-4 w-full  ">
+            <div class="flex justify-between py-3">
+
+                <div class="text-gray-900 dark:text-white text-2xl font-medium">Good Morning 👏</div>
+
+                <form class=" w-150">
+                    <div class="relative">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="w-3.5 h-3.5 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                            </svg>
+                        </div>
+                        <input type="search" id="default-search"
+                            class="block w-full p-4 ps-10 py-3 text-sm text-gray-900  border border-gray-300 dark:border-gray-700 focus:ring-green-500 focus:border-green-500 rounded-lg   dark:bg-gray-900 dark:placeholder-gray-400 dark:text-white "
+                            placeholder="XXXX-X" required />
+                        <!-- <button type="submit"
+                            class="text-white absolute end-2.5 bottom-2.5 bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-1">+</button> -->
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="flex flex-wrap gap-2 my-3">
+                <div class="px-8 py-1.5 bg-gray-100 dark:bg-gray-800 text-base dark:text-white rounded-md">Burgers</div>
+                <div class="px-8 py-1.5 bg-gray-100 dark:bg-gray-800 text-base dark:text-white rounded-md">Pizzas</div>
+                <div class="px-8 py-1.5 bg-gray-100 dark:bg-gray-800 text-base dark:text-white rounded-md">Tikka</div>
+                <div class="px-8 py-1.5 bg-gray-100 dark:bg-gray-800 text-base dark:text-white rounded-md">Sandwiches
+                </div>
+                <div class="px-8 py-1.5 bg-green-600 text-white rounded-md">Bewerages & Drinks</div>
+                <div class="px-8 py-1.5 bg-gray-100 dark:bg-gray-800 text-base dark:text-white rounded-md">Fries</div>
+            </div>
+            <div class="text-gray-900 font-medium dark:text-green-400">ITEMS</div>
+            <div class="flex flex-wrap gap-2 my-3">
+                <div
+                    class="w-[150px] h-[130px] p-3 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md relative">
+                    <div class="text-lg text-gray-400 ">0034</div>
+                    <div class="text-sm font-medium">Fried Chicken Burgers</div>
+                    <div class="text-sm text-gray-400 absolute bottom-3 right-3">200/=</div>
+                </div>
+                <div
+                    class="w-[150px] h-[130px] p-3 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md relative">
+                    <div class="text-lg text-gray-400 ">0034</div>
+                    <div class="text-sm font-medium">Pizzas</div>
+                    <div class="text-sm text-gray-400 absolute bottom-3 right-3">200/=</div>
+                </div>
+                <div
+                    class="w-[150px] h-[130px] p-3 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md relative">
+                    <div class="text-lg text-gray-400 ">0034</div>
+                    <div class="text-sm font-medium">Sandwiches</div>
+                    <div class="text-sm text-gray-400 absolute bottom-3 right-3">200/=</div>
+                </div>
+                <div
+                    class="w-[150px] h-[130px] p-3 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md relative">
+                    <div class="text-lg text-gray-400 ">0034</div>
+                    <div class="text-sm font-medium">Burgers</div>
+                    <div class="text-sm text-gray-400 absolute bottom-3 right-3">200/=</div>
+                </div>
+                <div
+                    class="w-[150px] h-[130px] p-3 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md relative">
+                    <div class="text-lg text-gray-400 ">0034</div>
+                    <div class="text-sm font-medium">Pizzas</div>
+                    <div class="text-sm text-gray-400 absolute bottom-3 right-3">200/=</div>
+                </div>
+                <div
+                    class="w-[150px] h-[130px] p-3 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md relative">
+                    <div class="text-lg text-gray-400">0034</div>
+                    <div class="text-sm font-medium">Sandwiches</div>
+                    <div class="text-sm text-gray-400 absolute bottom-3 right-3">200/=</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-2 pb-4 px-4  w-[800px]   border-gray-300 border-l  border-dashed dark:border-gray-600">
+            <div class="text-gray-900 dark:text-white  text-2xl mb-3 font-medium">Order Summary</div>
+            <div class="text-gray-900 dark:text-gray-300  text-xs mb-1">Date: Monday, 10.00 AM 10/02/24 </div>
+            <div class="text-gray-900 dark:text-gray-300  text-xs ">Code: #00238</div>
+            <div class="mt-3  space-y-1 h-[300px]" style="overflow: auto;">
+
+                <div class="bg-gray-50 py-3 dark:bg-gray-800 flex items-center w-full  justify-between rounded-lg px-3">
+
+                    <div class=" text-gray-900 dark:text-gray-200 font-normal text-xs">
+                        <div>Fried Chicken Burgers</div>
+                        <div class="text-gray-400 ">0023</div>
+                    </div>
+
+                    <div class="text-base font-normal flex items-center gap-4   text-gray-900 dark:text-gray-300">
+                        <button type="button"
+                            class="text-white bg-red-500/50  hover:bg-red-500  font-medium rounded-sm  w-[30px] h-[30px] flex justify-center items-center ">-</button>
+                        <div>
+                            2
+                        </div>
+                        <button type="button"
+                            class="text-white bg-green-600/50 hover:bg-green-600 font-medium rounded-sm  w-[30px] h-[30px] flex justify-center items-center ">+</button>
+
+                    </div>
+
+                    <div class=" text-sm font-normal   text-gray-900 dark:text-gray-300">1,499
+                    </div>
+                </div>
+                <div class="bg-gray-50 py-3 dark:bg-gray-800 flex items-center w-full  justify-between rounded-lg px-3">
+
+                    <div class=" text-gray-900 dark:text-gray-200 font-normal text-xs">
+                        <div>Fried Chicken Burgers</div>
+                        <div class="text-gray-400 ">0023</div>
+                    </div>
+
+                    <div class="text-base font-normal flex items-center gap-4   text-gray-900 dark:text-gray-300">
+                        <button type="button"
+                            class="text-white bg-red-500/50  hover:bg-red-500  font-medium rounded-sm  w-[30px] h-[30px] flex justify-center items-center ">-</button>
+                        <div>
+                            2
+                        </div>
+                        <button type="button"
+                            class="text-white bg-green-600/50 hover:bg-green-600 font-medium rounded-sm  w-[30px] h-[30px] flex justify-center items-center ">+</button>
+
+                    </div>
+
+                    <div class=" text-sm font-normal   text-gray-900 dark:text-gray-300">1,499
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 py-3 dark:bg-gray-800 flex items-center w-full  justify-between rounded-lg px-3">
+
+                    <div class=" text-gray-900 dark:text-gray-200 font-normal text-xs">
+                        <div>Fried Chicken Burgers</div>
+                        <div class="text-gray-400 ">0023</div>
+                    </div>
+
+                    <div class="text-base font-normal flex items-center gap-4   text-gray-900 dark:text-gray-300">
+                        <button type="button"
+                            class="text-white bg-red-500/50  hover:bg-red-500  font-medium rounded-sm  w-[30px] h-[30px] flex justify-center items-center ">-</button>
+                        <div>
+                            2
+                        </div>
+                        <button type="button"
+                            class="text-white bg-green-600/50 hover:bg-green-600 font-medium rounded-sm  w-[30px] h-[30px] flex justify-center items-center ">+</button>
+
+                    </div>
+
+                    <div class=" text-sm font-normal   text-gray-900 dark:text-gray-300">1,499
+                    </div>
+                </div>
+                <div class="bg-gray-50 py-3 dark:bg-gray-800 flex items-center w-full  justify-between rounded-lg px-3">
+
+                    <div class=" text-gray-900 dark:text-gray-200 font-normal text-xs">
+                        <div>Fried Chicken Burgers</div>
+                        <div class="text-gray-400 ">0023</div>
+                    </div>
+
+                    <div class="text-base font-normal flex items-center gap-4   text-gray-900 dark:text-gray-300">
+                        <button type="button"
+                            class="text-white bg-red-500/50  hover:bg-red-500  font-medium rounded-sm  w-[30px] h-[30px] flex justify-center items-center ">-</button>
+                        <div>
+                            2
+                        </div>
+                        <button type="button"
+                            class="text-white bg-green-600/50 hover:bg-green-600 font-medium rounded-sm  w-[30px] h-[30px] flex justify-center items-center ">+</button>
+
+                    </div>
+
+                    <div class=" text-sm font-normal   text-gray-900 dark:text-gray-300">1,499
+                    </div>
+                </div>
+                <div class="bg-gray-50 py-3 dark:bg-gray-800 flex items-center w-full  justify-between rounded-lg px-3">
+
+                    <div class=" text-gray-900 dark:text-gray-200 font-normal text-xs">
+                        <div>Fried Chicken Burgers</div>
+                        <div class="text-gray-400 ">0023</div>
+                    </div>
+
+                    <div class="text-base font-normal flex items-center gap-4   text-gray-900 dark:text-gray-300">
+                        <button type="button"
+                            class="text-white bg-red-500/50  hover:bg-red-500  font-medium rounded-sm  w-[30px] h-[30px] flex justify-center items-center ">-</button>
+                        <div>
+                            2
+                        </div>
+                        <button type="button"
+                            class="text-white bg-green-600/50 hover:bg-green-600 font-medium rounded-sm  w-[30px] h-[30px] flex justify-center items-center ">+</button>
+
+                    </div>
+
+                    <div class=" text-sm font-normal   text-gray-900 dark:text-gray-300">1,499
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="mt-1  " style="overflow: auto;">
+
+                <div
+                    class=" text-xs text-gray-900 dark:text-gray-200  py-1 flex items-center w-full font-medium  justify-between px-3">
+                    <div class="">SubTotal</div>
+                    <div class="">4,450</div>
+                </div>
+                <div
+                    class="text-xs text-gray-900 dark:text-gray-200  py-1 flex items-center w-full  font-medium justify-between px-3">
+                    <div class="">Tax(5%)</div>
+                    <div class="">50</div>
+                </div>
+                <div
+                    class="text-xs text-gray-900 dark:text-gray-200  py-1 flex items-center w-full  font-medium justify-between px-3">
+                    <div class="">Discount(5%)</div>
+                    <div class="">50</div>
+                </div>
+                <div
+                    class=" flex items-center w-full py-2 mt-2 justify-between  px-3 border-t border-dashed border-gray-600 ">
+                    <div class=" text-gray-900 dark:text-gray-100 font-medium ">Total Payment</div>
+                    <div class=" font-medium   text-gray-900 dark:text-gray-100">4,450</div>
+                </div>
+                <div class="flex gap-2">
+
+                    <button type="button"
+                        class="text-gray-900 dark:text-gray-400 w-full bg-gray-300 font-medium  text-sm  py-2.5 text-center rounded-md  dark:bg-gray-800 ">Clear
+                        All</button>
+                    <button type="button"
+                        class="text-white w-full bg-green-600 hover:bg-green-700  font-medium text-sm  py-2.5 text-center rounded-md ">Print
+                        Bill </button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="border border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96 mb-4"></div> -->
+
+
+
+{% endblock %}
