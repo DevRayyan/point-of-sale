@@ -1,0 +1,8 @@
+[
+    "pip install flask",
+    "pip install flask_sqlalchemy",
+    "pip install pip Flask-Paginate    ",
+    "pip install mysql-connector-python",
+    "pip install mysqlclient",
+    "after installing libs, run python app.py in terminal and hit enter your server starts"
+]
