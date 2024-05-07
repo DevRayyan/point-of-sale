@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Website{% endblock %}</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -22,13 +24,13 @@
 
     <div class="antialiased bg-gray-50 dark:bg-gray-900">
 
-{% include 'common/navbar.html' %}
-{% include 'common/sidebar.html' %}
-<main class="p-4 md:ml-64 h-auto pt-20">
-    
-    {% block content %}{% endblock %}
-    {% include 'common/footer.html' %}
-</main>
+        {% include 'common/navbar.html' %}
+        {% include 'common/sidebar.html' %}
+        <main class="p-4 md:ml-64 h-auto pt-20">
+
+            {% block content %}{% endblock %}
+            {% include 'common/footer.html' %}
+        </main>
 
     </div>
 </body>

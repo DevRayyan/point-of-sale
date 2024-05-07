@@ -92,7 +92,7 @@
         <ul id="dropdown-sales"
           class=" py-2 space-y-2 {% if '/catalog' in request.path  %}  {% else %}hidden {% endif %}">
           <li>
-            <a href="{{ url_for('categories')}}"
+            <a href="{{ url_for('category')}}"
               class="flex items-center p-2 pl-11 w-full text-base font-normal text-sm text-gray-900 rounded-lg transition duration-75 group {% if request.path == '/catalog/categories' %} bg-gray-100 dark:bg-gray-700 {% endif %} hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">Categories</a>
           </li>
           <li>
