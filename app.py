@@ -35,27 +35,36 @@ def pos():
 def category():
     return render_template('catalog/category.html')
 
+@app.route('/delete/<string:id>', methods=['DELETE'])
+def deleteRecord(id):
+    category = Category.query.filter_by(id=id).first()
+    if category:
+        db.session.delete(category)
+        db.session.commit()
+        return "Record deleted successfully"
+    else:
+        return "Record not found or already deleted"
+    
+
 @app.route('/get-list')
 def getList():
 
     rows = Category.query.all()
    
-    data = [{'checkbox': ''' 
+    data = [{'checkbox': f''' 
                     <div class="flex items-center">
-                        <input id="checkbox-table-search-1" value="1" type="checkbox"
-                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                        <input value="{row.id}" type="checkbox"
+                            class="checkbox w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     </div>
                 ''',
              'id': row.id,
              'name': row.name,
-             'status': row.status,
+             'status': '<div class="bg-green-600 text-white py-1 rounded-sm text-center text-xs">Active<div>' if row.status==1 else '<div class="bg-red-500 text-white py-1 rounded-sm text-center text-xs">Not Active</div>' ,
              'created_at': row.created_at.strftime('%d-%m-%Y %H:%M'),
              'updated_at': row.updated_at.strftime('%d-%m-%Y %H:%M'),
-             'action':'''
-             <button type="button" class="text-white bg-blue-400 hover:bg-blue-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm w-7 h-7 me-1 dark:bg-blue-500 dark:hover:bg-blue-600 focus:outline-none dark:focus:ring-blue-800"><i class="fa-light fa-pen"></i></button>
-             <button type="button" class="text-white bg-red-400 hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-md text-sm w-7 h-7 me-1 dark:bg-red-500 dark:hover:bg-red-600 focus:outline-none dark:focus:ring-red-800"><i class="fa-light fa-trash"></i></button>
-
+             'action':f'''
+             <button type="button" onclick="editRecord('{row.id}')" class="text-base bg-gray-200 rounded-md text-xs w-7 h-7 me-1 dark:bg-gray-700 "><i class="fa-light fa-pen"></i></button>
+             <button type="button" onclick="deleteRecord('{row.id}')" class="text-base bg-gray-200 rounded-md text-xs w-7 h-7 me-1 dark:bg-gray-700 "><i class="fa-light fa-trash"></i></button>
              ''',
              } 
             for row in rows]
