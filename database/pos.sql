@@ -16,7 +16,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `category` (
   `id` int(11) PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
-  `status` int(11) NOT NULL,
+  `status` int(11) NOT NULL DEFAULT 0,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
